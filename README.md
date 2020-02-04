@@ -6,7 +6,7 @@ https://github.com/muhammederdem/vue-interactive-paycard
 https://github.com/jasminmif/react-interactive-paycard
 and now in  `Angular 8` 
 ### Demo 
-![](angularPaycard.gif)
+![](angularPaycard.mp4)
 ## Also
 This is also example of usage of ReactiveFormsModule in Angular 8
 ## Setup
