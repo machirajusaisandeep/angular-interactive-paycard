@@ -1,0 +1,49 @@
+<div class="payMask">
+  <div class="pay_form">
+    <form [formGroup]="payCardForm">
+      <mat-form-field class="input_full">
+        <input matInput placeholder="Card Number" (keydown)="setView('front')" payCardMask formControlName="cardNumber" >
+      </mat-form-field>
+      <mat-form-field class="input_full">
+        <input matInput placeholder="Name On Card"  (keydown)="setView('front')" formControlName="nameOnCard">
+      </mat-form-field>
+      <div>
+        <mat-form-field class="input_third">
+          <input matInput placeholder="month" (keydown)="setView('front')" formControlName="month">
+          <mat-error *ngIf="checkFormError('month','max')">Month cannot Exceeded more than 12</mat-error>
+          <mat-error *ngIf="checkFormError('month','min')">Month cannot be less than 1</mat-error>
+          <mat-error *ngIf="checkFormError('month','maxLength')">Month cannot have more than 2 digits</mat-error>
+        </mat-form-field>
+        <span class="seperator">/</span>
+        <mat-form-field class="input_third">
+          <input matInput placeholder="year"  (keydown)="setView('front')" formControlName="year">
+          <mat-error *ngIf="checkFormError('year','maxLength')">year cannot have more than 4 digits</mat-error>
+        </mat-form-field>
+        <mat-form-field class="input_third">
+          <input matInput placeholder="CVV" (keydown)="setView('back')" formControlName="cvv">
+          <mat-error *ngIf="checkFormError('cvv','maxLength')">cvv cannot have more than 3 digits</mat-error>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <div class="pay_card">
+  
+  
+    <div class="card_panel">
+      <div class="card card_front_view" *ngIf="isFrontview">
+        <div class="card_number">{{payCardForm.controls.cardNumber.value | cardNumHide}}</div>
+        <div class="card_expiry_date">{{payCardForm.controls.month.value}} / {{payCardForm.controls.year.value}}</div>
+        <div class="card_owner">{{payCardForm.controls.nameOnCard.value}}</div>
+        <span>{{cardType}}</span>
+        <div class="card_logo"></div>
+      </div>
+      <div class="card card_back_view"*ngIf="!isFrontview" >
+        <div class="card_strip"></div>
+        <div class="card_signature"></div>
+        <div class="card_cvv">{{payCardForm.controls.cvv.value}}</div>
+      </div>
+    </div>
+  
+  </div>
+  
+</div>

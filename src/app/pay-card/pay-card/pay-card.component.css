@@ -1,0 +1,113 @@
+body {
+    font: 16px "Helvetica Neue", Helvetica, sans-serif;
+    background: #fbfbfb;
+    color: #666;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  a {
+    color: #000;
+  }
+  
+  .hdr_title {
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+    padding: 50px 0;
+    font-weight: 200;
+  }
+  .hdr_sub_title {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+
+  .card_panel {
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .card {
+    font: 16px/1.5 'Helvetica Neue', Helvetica, sans-serif;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 425px;
+    height: 270px;
+    text-align: left;
+    padding: 30px;
+    margin-bottom: 50px;
+    color: #a2a21d;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: black;
+  }
+  .card_number {
+    font-size: 30px;
+    padding: 90px 0 15px;
+    text-align: center;
+  }
+  .card_expiry_date {
+    font-size: 14px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .card_owner {
+    text-align: left;
+  }
+  .card_logo {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  .card_strip {
+    background: #000;
+    height: 50px;
+    margin-bottom: 30px;
+  }
+  .card_signature {
+    float: left;
+    width: 65%;
+    height: 40px;
+    margin-left: 10px;
+    background: #999;
+  }
+  .card_cvv {
+    float: left;
+    padding: 7px;
+    background: #fff;
+    color: #111;
+    line-height: 2;
+    width: 30px;
+    height: 26px;
+  }
+  .card_front_view {
+    font-size: 16px;
+    font-family: 'Source Code Pro';
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  }
+  .card_back_view {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+  }
+  .pay_card,.pay_form{
+    float:left;
+    width:50%;
+  }
+  .input_full {
+    width: 80%;
+}
+.seperator{
+  padding:10px
+}
+.payMask{
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+  height: 50vh;
+  padding: 15px;
+  border: 1px solid #cecece;
+  box-shadow: rgba(173, 173, 173, 0.38) 5px 5px 10px 10px;
+
+}
